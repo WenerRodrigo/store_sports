@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -7,9 +8,9 @@ const Home = () => {
                 <h1 className={styles.title}>Mega Store do Esporte</h1>
                 <div>
                     <ul className={styles.navegacao}>
-                        <li>Produtos</li>
-                        <li>Contato</li>
-                        <li>Sobre</li>
+                        <Link to="/products">Produtos</Link>
+                        <Link to="/contact">Contato</Link>
+                        <Link to="/about">Sobre</Link>
                     </ul>
                 </div>
             </div>

@@ -1,6 +1,8 @@
+import styles from './Footer.module.css';
+
 const Footer = () => {
     return (
-        <footer>
+        <footer className={styles.rodape}>
             <p>
                 © Copyright 2023 Wener Rodrigo.Todos os direitos reservados.
             </p>
