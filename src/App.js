@@ -1,10 +1,12 @@
-import Home from "./pages/home/Home";
+import Footer from "./components/footer/Footer";
+import RouterApp from "./components/router/router";
 
 
 function App() {
   return (
     <div>
-      <Home />
+      <RouterApp />
+      <Footer />
     </div>
   );
 }
