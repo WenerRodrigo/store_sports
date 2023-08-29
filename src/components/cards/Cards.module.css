@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 60px;
+    padding: 55px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.itens {
+    width: 315px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.descricao {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    padding: 7px;
+    background-color: #008000;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+span {
+    text-decoration: line-through;
+    background-color: #f5f550;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
+import Cards from '../../components/cards/Cards';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <div className={styles.descricao}>
                 <h2>Confira abaixo os nossos produtos</h2>
             </div>
+            <Cards />
         </>
 
     )

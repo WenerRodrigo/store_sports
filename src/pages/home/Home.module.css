@@ -30,6 +30,12 @@
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 .descricao {
     display: flex;
     justify-content: center;
