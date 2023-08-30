@@ -7,8 +7,8 @@ import bolaPenalty from '../../assets/bola_penalty.jpg';
 import chuteiraAdidas from '../../assets/chut_adidas.png';
 import raquete from '../../assets/raquete.png';
 import styles from './Products.module.css';
-import Header from '../../components/header/Header';
 import Button from '../../components/button/Button';
+import HeaderCart from '../../components/headerCart/HeaderCart';
 
 const productList = [
     {
@@ -79,18 +79,18 @@ const productList = [
 const Products = () => {
     return (
         <>
-            <Header />
-            <Button />
+            <HeaderCart />
+            <Button/>
             <div className={styles.produto}>
-            {productList.map((produto, index) => (
-                <div key={index} className={styles.card}>
-                    <img src={produto.imagem} alt={`Imagem${index}`} />
-                    <p className={styles.descricao}>{produto.nome}</p>
-                    <span>{`De${produto.precoOrignal}`}</span> <strong>{`Por${produto.precoPromocional}`}</strong>
-                    <i> {`${produto.valorParcelado}`}</i>
-                </div>
-            ))}
-        </div>
+                {productList.map((produto, index) => (
+                    <div key={index} className={styles.card}>
+                        <img src={produto.imagem} alt={`Imagem${index}`} />
+                        <p className={styles.descricao}>{produto.nome}</p>
+                        <span>{`De${produto.precoOrignal}`}</span> <strong>{`Por${produto.precoPromocional}`}</strong>
+                        <i> {`${produto.valorParcelado}`}</i>
+                    </div>
+                ))}
+            </div>
         </>
     )
 }

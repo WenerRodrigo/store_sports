@@ -1,4 +1,5 @@
 .produto {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -7,7 +8,7 @@
 }
 
 .produto img {
-    width: 300px;
+    width: 200px;
     padding-top: 10px;
 }
 
@@ -16,13 +17,8 @@
     margin: 30px;
     border: 1px solid #222;
     border-radius: 12px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease-in-out;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 } 
-
-.card:hover {
-    transform: scale(1.1);
-}
 
 .descricao {
     background-color: #008000;
