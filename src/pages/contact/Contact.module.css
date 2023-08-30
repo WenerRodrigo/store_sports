@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form {
+    width: 80%;
+    height: 70vh;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgbs(0, 0, 0, 0.6);
+}
+
+.campos {
+    margin-bottom: 10px;
+}
+
+.label {
+    display: block;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+input{
+    width: 90%;
+    height: 25px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+}
+
+textarea {
+    width: 90%;
+    height: 175px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+
+.botao {
+    background-color: #0404c7;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    width: 70px;
+    
+}
+
+.botao:hover {
+    background-color: #000044;
+    cursor: pointer;
+}
