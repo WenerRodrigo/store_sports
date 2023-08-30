@@ -1,0 +1,12 @@
+.container {
+    background-color: #222;
+    height: 13vh;
+    padding: 20px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+}

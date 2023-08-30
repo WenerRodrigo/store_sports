@@ -28,7 +28,7 @@ const Cards = () => {
             </div>
             <div>
                 <img className={styles.itens} src={camisaFem} alt="Camisa Feminina São Paulo FC" />
-                <p className={styles.descricao}>Camisa São Paulo FC</p>
+                <p className={styles.descricao}>Camisa Fem São Paulo FC</p>
                 <span>De R$ 249,90</span><strong> Por R$ 179,90</strong>
                 <i> ou 5x de 49,98</i>
             </div>

@@ -1,7 +1,10 @@
+import styles from './Header.module.css';
+
+
 const Header = () => {
     return (
-        <div>
-            <h2>Header</h2>
+        <div className={styles.container}>
+            <h2>Mega Store do Esporte</h2>
         </div>
     )
 }

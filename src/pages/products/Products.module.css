@@ -1,0 +1,33 @@
+.produto {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produto img {
+    width: 300px;
+    padding-top: 10px;
+}
+
+.card {
+    padding: 39px;
+    margin: 30px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+} 
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.descricao {
+    background-color: #008000;
+    color: #fff;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
