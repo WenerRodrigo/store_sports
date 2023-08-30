@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from './Contact.module.css';
 import Header from '../../components/header/Header';
+import Button from "../../components/button/Button";
 
 
 
@@ -32,6 +33,7 @@ const Contact = () => {
     return (
         <>
         <Header />
+        <Button />
             <div className={styles.container}>
             <h2 className={styles.title}>Deixe sua mensagem</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -44,6 +46,7 @@ const Contact = () => {
                         value={formData.nome}
                         onChange={handleChange}
                         placeholder="Digite seu nome"
+                        required
                     />
                 </div>
                 <div className={styles.campos}>
@@ -55,6 +58,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Digite seu Email"
+                        required
                     />
                 </div>
                 <div className={styles.campos}>
@@ -66,6 +70,7 @@ const Contact = () => {
                         value={formData.telefone}
                         onChange={handleChange}
                         placeholder="Digite seu Telefone"
+                        required
                     />
                 </div>
                 <div className={styles.campos}>

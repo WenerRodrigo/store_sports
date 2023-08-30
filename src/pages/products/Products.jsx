@@ -8,6 +8,7 @@ import chuteiraAdidas from '../../assets/chut_adidas.png';
 import raquete from '../../assets/raquete.png';
 import styles from './Products.module.css';
 import Header from '../../components/header/Header';
+import Button from '../../components/button/Button';
 
 const productList = [
     {
@@ -79,6 +80,7 @@ const Products = () => {
     return (
         <>
             <Header />
+            <Button />
             <div className={styles.produto}>
             {productList.map((produto, index) => (
                 <div key={index} className={styles.card}>

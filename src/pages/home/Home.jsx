@@ -16,7 +16,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.descricao}>
-                <h2>Confira abaixo os nossos produtos</h2>
+                <h2>Confira abaixo os nossos produtos 👇</h2>
             </div>
             <Cards />
         </>
