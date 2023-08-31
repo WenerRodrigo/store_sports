@@ -1,13 +1,14 @@
 import Footer from "./components/footer/Footer";
 import RouterApp from "./components/router/router";
+import Provider from "./context/Provider";
 
 
 function App() {
   return (
-    <div>
+    <Provider>
       <RouterApp />
       <Footer />
-    </div>
+    </Provider>
   );
 }
 

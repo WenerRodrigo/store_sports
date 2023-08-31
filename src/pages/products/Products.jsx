@@ -10,6 +10,9 @@ import styles from './Products.module.css';
 import Button from '../../components/button/Button';
 import HeaderCart from '../../components/headerCart/HeaderCart';
 import { BsFillCartPlusFill } from 'react-icons/bs';
+import Cart from '../../components/cart/Cart';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 const productList = [
     {
@@ -78,14 +81,22 @@ const productList = [
 ]
 
 const Products = () => {
+    const { cartItens, setCartItens } = useContext(AppContext);
+
+    const handleAddCart = () => {
+        setCartItens([ ...cartItens]);
+    }
     return (
         <>
             <HeaderCart />
+            <Cart />
             <Button />
             <div className={styles.produto}>
                 {productList.map((produto, index) => (
                     <div key={index} className={styles.card}>
-                        <button className={styles.btn_card}>
+                        <button
+                            onClick={handleAddCart}
+                            className={styles.btn_card}>
                             <BsFillCartPlusFill />
                         </button>
                         <img src={produto.imagem} alt={`Imagem${index}`} />

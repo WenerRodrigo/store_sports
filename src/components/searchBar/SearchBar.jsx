@@ -1,22 +1,25 @@
 import { BsSearch } from 'react-icons/bs';
 import styles from './SearchBar.module.css';
-import { useState } from 'react';
-import {ListProducts}  from '../../utils/ListProducts';
+import { useState, useContext } from 'react';
+import fetchProducts from '../../api/fetchProducts';
+import AppContext from '../../context/AppContext';
 
 
 const SearchBar = () => {
     const [searchValue, setSearchValue] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-
+    const { products, setProducts } = useContext(AppContext);
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        
-        const results = await ListProducts.filter((product) => {
-            return product.name.toLowerCase().includes(searchValue.toLowerCase());
-        });
 
-        setSearchResults(results);
+
+
+        const products = await fetchProducts(searchValue);
+        setProducts(products);
+        setSearchValue('');
+        setSearchResults('');
+
     }
 
     return (
