@@ -9,6 +9,7 @@ import raquete from '../../assets/raquete.png';
 import styles from './Products.module.css';
 import Button from '../../components/button/Button';
 import HeaderCart from '../../components/headerCart/HeaderCart';
+import { BsFillCartPlusFill } from 'react-icons/bs';
 
 const productList = [
     {
@@ -80,10 +81,13 @@ const Products = () => {
     return (
         <>
             <HeaderCart />
-            <Button/>
+            <Button />
             <div className={styles.produto}>
                 {productList.map((produto, index) => (
                     <div key={index} className={styles.card}>
+                        <button className={styles.btn_card}>
+                            <BsFillCartPlusFill />
+                        </button>
                         <img src={produto.imagem} alt={`Imagem${index}`} />
                         <p className={styles.descricao}>{produto.nome}</p>
                         <span>{`De${produto.precoOrignal}`}</span> <strong>{`Por${produto.precoPromocional}`}</strong>

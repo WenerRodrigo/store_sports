@@ -15,10 +15,18 @@
 .card {
     padding: 39px;
     margin: 30px;
-    border: 1px solid #222;
     border-radius: 12px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
 } 
+
+.card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .btn_card {
+    display: flex;
+}
 
 .descricao {
     background-color: #008000;
@@ -26,4 +34,22 @@
     width: auto;
     padding: 10px;
     border-radius: 10px;
+}
+
+.btn_card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 12px 13px;
+    color: #0c5dd6;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    cursor: pointer;
 }
