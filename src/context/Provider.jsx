@@ -6,13 +6,16 @@ import AppContext from "./AppContext";
 const Provider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [cartItens, setCartItens] = useState([]);
+    const [ isCartVisible, setIsCartVisible ] = useState(false);
 
     
     const value = {
         products,
         setProducts,
         cartItens,
-        setCartItens
+        setCartItens,
+        isCartVisible, 
+        setIsCartVisible
     }
 
     return (

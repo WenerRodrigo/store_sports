@@ -4,8 +4,28 @@
     border: 1px solid black;
     background-color: #fff;
     position: absolute;
-    height: 30vh;
+    height: 18vh;
     top: 95px;
     right: 0;
     padding: 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart_itens {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.cart_resume {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 35px 0 15px;
+    border-top: 1px solid #ccc;
+}
+
+
+.cart_itens .cart_item:last-child {
+    border-bottom: none;
 }

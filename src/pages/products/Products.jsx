@@ -16,6 +16,7 @@ import AppContext from '../../context/AppContext';
 
 const productList = [
     {
+        id: 1,
         nome: 'Camisa São Paulo FC',
         imagem: camisa,
         precoOrignal: 'R$ 299,90',
@@ -23,6 +24,7 @@ const productList = [
         valorParcelado: 'ou 5x de 59,98'
     },
     {
+        id: 2,
         nome: 'Camisa Manchester City FC',
         imagem: camisaCity,
         precoOrignal: 'R$ 299,90',
@@ -30,6 +32,7 @@ const productList = [
         valorParcelado: 'ou 5x de 59,98'
     },
     {
+        id: 3,
         nome: 'Bola UEFA Champions League',
         imagem: bola,
         precoOrignal: 'R$ 199,90',
@@ -37,6 +40,7 @@ const productList = [
         valorParcelado: 'ou 5x de 39,98'
     },
     {
+        id: 4,
         nome: 'Bola Adidas',
         imagem: bolaAdidas,
         precoOrignal: 'R$ 199,90',
@@ -44,6 +48,7 @@ const productList = [
         valorParcelado: 'ou 5x de 39,98'
     },
     {
+        id: 5,
         nome: 'Camisa Fem São Paulo FC',
         imagem: camisa,
         precoOrignal: 'R$ 199,90',
@@ -51,6 +56,7 @@ const productList = [
         valorParcelado: 'ou 5x de 39,98'
     },
     {
+        id: 6,
         nome: 'Raquete Tênis',
         imagem: raquete,
         precoOrignal: 'R$ 249,90',
@@ -58,6 +64,7 @@ const productList = [
         valorParcelado: 'ou 5x de 49,98'
     },
     {
+        id: 7,
         nome: 'Bola Futebol Campo Penalty',
         imagem: bolaPenalty,
         precoOrignal: 'R$ 179,90',
@@ -65,6 +72,7 @@ const productList = [
         valorParcelado: 'ou 5x de 35,98'
     },
     {
+        id: 8,
         nome: 'Camisa Manchester United FC',
         imagem: camisaUnited,
         precoOrignal: 'R$ 299,90',
@@ -72,6 +80,7 @@ const productList = [
         valorParcelado: 'ou 5x de 49,98'
     },
     {
+        id: 9,
         nome: 'Chuteira Adidas Campo',
         imagem: chuteiraAdidas,
         precoOrignal: 'R$ 199,90',
@@ -80,12 +89,11 @@ const productList = [
     },
 ]
 
-const Products = () => {
+const Products = ({ produto }) => {
+    
     const { cartItens, setCartItens } = useContext(AppContext);
 
-    const handleAddCart = () => {
-        setCartItens([ ...cartItens]);
-    }
+    const handleAddCart = (products) => { setCartItens([ ...cartItens, products]);}
     return (
         <>
             <HeaderCart />
@@ -95,7 +103,7 @@ const Products = () => {
                 {productList.map((produto, index) => (
                     <div key={index} className={styles.card}>
                         <button
-                            onClick={handleAddCart}
+                            onClick={() => handleAddCart(produto)}
                             className={styles.btn_card}>
                             <BsFillCartPlusFill />
                         </button>

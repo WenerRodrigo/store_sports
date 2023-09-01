@@ -1,13 +1,20 @@
+import { useContext } from 'react';
 import CartItem from '../cartItem/CartItem';
 import styles from './Cart.module.css';
+import AppContext from '../../context/AppContext';
 
 const Cart = () => {
+    const { cartItens, isCartVisible } = useContext(AppContext);
+    const totalPrice = cartItens.reduce((acc, item) => item.price + acc, 0);
+
+
+
     return (
         <section className={styles.cart}>
             <div className={styles.cart_itens}>
-                <CartItem data={{thumbnail: '', title: '', price: '123,00'}}/>
+                {cartItens.map((cartItem) => <CartItem key={cartItem.id} data={cartItem} />)}
             </div>
-            <div className={styles.cart_resume}>resumo do carrinho</div>
+            <div className={styles.cart_resume}>{totalPrice}</div>
         </section>
     )
 }
